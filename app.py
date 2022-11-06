@@ -18,7 +18,7 @@ import webbrowser
 url = "https://www.google.com/"
 
 
-def Task():
+def task():
     # Browser open
     webbrowser.open(url)
 
@@ -44,5 +44,5 @@ def screenShot():
 
 
 # Conduct browseropen and screenShot
-Task()
+task()
 screenShot()
