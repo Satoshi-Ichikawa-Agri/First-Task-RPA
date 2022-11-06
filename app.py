@@ -18,28 +18,31 @@ import webbrowser
 url = "https://www.google.com/"
 
 
+def Task():
+    # Browser open
+    webbrowser.open(url)
+
+    # Move searchBox
+    pyautogui.moveTo(800, 470, 1)
+
+    # Move searchBox
+    pyautogui.click()
+
+    # Write Word
+    pyautogui.write("hiraizumi kannkou")
+
+    # conduct enter command
+    pyautogui.press("enter")
+
+
 def screenShot():
     """Conduct screenShot
-    Take a image after 5s
+    Take a image after 3s
     """
-    time.sleep(5)
+    time.sleep(3)
     pyautogui.screenshot("Images/rpa_result.png")
 
 
-# Browser open
-webbrowser.open(url)
-
-# Move searchBox
-pyautogui.moveTo(800, 470, 1)
-
-# Move searchBox
-pyautogui.click()
-
-# Write Word
-pyautogui.write("hiraizumi kannkou")
-
-# conduct enter command
-pyautogui.press("enter")
-
-# Conduct screenShot
+# Conduct browseropen and screenShot
+Task()
 screenShot()
