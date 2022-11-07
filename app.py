@@ -1,8 +1,12 @@
 """ 要件
 1. googleの新しいタブを立ち上げ、そこに自動で平泉町 観光と入力し、検索
 2. 開いたページのスクリーンショットを撮って、保存
+※ ブラウザの立ち上げはwebbrowserを使うこと
+※ writeメソッドだと日本語入力ができないので、自身で調べて、日本語入力をすること
+※ クリックとクリックの間は少し時間を空ける方が確実なのでtimeモジュールを使用して工夫をすること
 """
 import pyautogui
+import pyperclip
 import time
 import webbrowser
 
@@ -32,7 +36,8 @@ def search():
     pyautogui.click()
 
     # Write Word
-    pyautogui.write("hiraizumi kannkou")
+    pyperclip.copy("平泉町 観光")
+    pyautogui.hotkey("ctrl", "v")
 
     # conduct enter command
     pyautogui.press("enter")
