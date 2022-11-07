@@ -18,10 +18,13 @@ import webbrowser
 url = "https://www.google.com/"
 
 
-def task():
-    # Browser open
+def webbrowserOpen():
+    """Open webbrowser"""
     webbrowser.open(url)
 
+
+def search():
+    """search"""
     # Move searchBox
     pyautogui.moveTo(800, 470, 1)
 
@@ -44,5 +47,6 @@ def screenShot():
 
 
 # Conduct browseropen and screenShot
-task()
+webbrowserOpen()
+search()
 screenShot()
