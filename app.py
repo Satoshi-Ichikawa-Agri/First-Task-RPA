@@ -47,6 +47,7 @@ def screenShot():
 
 
 # Conduct browseropen and screenShot
-webbrowserOpen()
-search()
-screenShot()
+if __name__ == "__main__":
+    webbrowserOpen()
+    search()
+    screenShot()
